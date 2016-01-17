@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+  	$(document).ready(function(){
+  		createTable(mydata.table);
+  	});
+  </script>
+
+<script type="text/javascript">
+function createTable(tableData){
+	//alert(mydata.table[0][0]);
+	mytable = $('<table></table>').attr({ class: "table" });
+	var rows = tableData.length;
+	var cols = tableData[0].length;
+	var tr = [];
+	for (var i = 0; i < rows; i++) {
+		var row = $('<tr></tr>').appendTo(mytable);
+		for (var j = 0; j < cols; j++) {
+			$('<td></td>').text(tableData[i][j]).appendTo(row); 
+		}
+		 		 
+	}
+	console.log("TTTTT:"+mytable.html());
+	mytable.appendTo("#mytable");	       
+  
+}
+</script>
+
+</head>
+<body>
+  
+<div class="container">
+  <h1>Dynamic Table by Using jQuery</h1>
+  <p>This part is inside a .container class.</p> 
+ 
+   <div id="mytable"></div>
+
+</div>
+
+<script>
+var mydata = {
+	"table":[[1, "Anna", "Pitt", 35, "New York", "USA"], [20, "Anna", "Pitt", 35, "New York", "USA"]]
+}
+</script>
+</body>
+</html>
+
