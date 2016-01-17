@@ -20,7 +20,6 @@ function createTable(tableData){
 	mytable = $('<table></table>').attr({ class: "table" });
 	var rows = tableData.length;
 	var cols = tableData[0].length;
-	var tr = [];
 	for (var i = 0; i < rows; i++) {
 		var row = $('<tr></tr>').appendTo(mytable);
 		for (var j = 0; j < cols; j++) {
