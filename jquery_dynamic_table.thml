@@ -8,15 +8,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-  <script type="text/javascript">
+  <script>
   	$(document).ready(function(){
   		createTable(mydata.table);
   	});
   </script>
 
-<script type="text/javascript">
+<script>
 function createTable(tableData){
-	//alert(mydata.table[0][0]);
+
 	mytable = $('<table></table>').attr({ class: "table" });
 	var rows = tableData.length;
 	var cols = tableData[0].length;
@@ -28,7 +28,6 @@ function createTable(tableData){
 		}
 		 		 
 	}
-	console.log("TTTTT:"+mytable.html());
 	mytable.appendTo("#mytable");	       
   
 }
