@@ -1,0 +1,30 @@
+Count frequecy of words in a list
+>>> from collections import Counter
+>>> list1=['apple','egg','apple','banana','egg','apple']
+>>> counts = Counter(list1)
+>>> print(counts)
+>>>Counter({'apple': 3, 'egg': 2, 'banana': 1})
+
+# Find the ten most common words in Hamlet
+>>> import re
+>>> words = re.findall(r'\w+', open('hamlet.txt').read().lower())
+>>> Counter(words).most_common(10)
+[('the', 1143), ('and', 966), ('to', 762), ('of', 669), ('i', 631),
+ ('you', 554),  ('a', 546), ('my', 514), ('hamlet', 471), ('in', 451)]
+
+Find long words
+We would like to
+find the words from the vocabulary of the text that are more than 15 characters long.
+Let’s call this property P, so that P(w) is true if and only if w is more than 15 characters
+long. Now we can express the words of interest using mathematical set notation as
+shown in (1a). This means “the set of all w such that w is an element of V (the vocabulary)
+and w has property P.”
+(1) a. {w | w ∈ V & P(w)}
+b. [w for w in V if p(w)]
+
+>>> V = set(text1)
+>>> long_words = [w for w in V if len(w) > 15]
+>>> sorted(long_words)
+
+
+
